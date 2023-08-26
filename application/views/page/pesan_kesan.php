@@ -1,8 +1,6 @@
 <form class="multisteps-form__form" action="https://jthemes.net/themes/html/BeWizard/JobApplication/JobV.1/action.php" id="wizard" method="POST" enctype="multipart/form-data">
     <div class="multisteps-form__panel js-active scaleIn" data-animation="scaleIn">
         <div class="wizard-forms form-step-2">
-            <!-- <span class="step-no position-absolute">Pesan / Kesan / Saran</span> -->
-
             <div class="wizard-inner-box">
                 <div class="inner-title text-center">
                     <h2>Bantu Kami Menjadi Lebih Baik</h2>
