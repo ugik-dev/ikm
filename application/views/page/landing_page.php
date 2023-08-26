@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="bottom-vector position-absolute">
-                <img src="assets/img/sd1.png" alt="">
+                <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
             </div>
         </div>
         <!-- step 1 -->
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="bottom-vector position-absolute">
-                    <img src="assets/img/sd1.png" alt="">
+                    <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     </ul>
                 </div>
                 <div class="bottom-vector position-absolute">
-                    <img src="assets/img/sd1.png" alt="">
+                    <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                     </ul>
                 </div>
                 <div class="bottom-vector position-absolute">
-                    <img src="assets/img/sd1.png" alt="">
+                    <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
                 </div>
             </div>
         </div>

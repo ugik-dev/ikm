@@ -38,12 +38,12 @@
     <div class="clearfix"></div> -->
     <div class="wrapper">
         <div class="wizard-content-1 pos-flex clearfix" style="display: flex !important">
-            <div class="steps d-inline-block clearfix" style="    max-width: 384px !important;
+            <div class="steps d-inline-block clearfix" style="    max-width: 204px !important;
                     max-height: 932px !important;
                     float: left !important;
                     position: relative !important;
                     border-radius: 30px !important;
-                    padding: 40px 40px 240px 40px !important;
+                    padding: 20px 20px 40px 20px !important;
                     box-shadow: 0px 1px 29px 0px rgba(1, 1, 1, 0.1) !important;
                     background-image: linear-gradient(180deg, #ede6ff 0%, white 100%) !important;">
                 <span class="bg-shape"></span>
@@ -95,9 +95,10 @@
             <div class="step-inner-content clearfix position-relative" style="    width: 100% !important;
     float: right !important;
     margin-left: 30px !important;
+    margin-top: 0px !important;
     max-width: 1292px !important;
     border-radius: 30px !important;
-    padding: 120px 120px 80px !important;
+    padding: 20px 20px 20px !important;
     box-shadow: 0px 1px 51px 0px rgba(1, 1, 1, 0.06) !important;
     background-image: linear-gradient(-90deg, #efffff 0%, white 100%) !important;">
                 <span class="bg-shape"></span>
