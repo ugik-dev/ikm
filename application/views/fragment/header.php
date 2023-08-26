@@ -37,7 +37,67 @@
     </div>
     <div class="clearfix"></div> -->
     <div class="wrapper">
-        <div class="wizard-content-1 pos-flex clearfix">
-            <?php $this->load->view('fragment/menu') ?>
-            <div class="step-inner-content clearfix position-relative">
+        <div class="wizard-content-1 pos-flex clearfix" style="display: flex !important">
+            <div class="steps d-inline-block clearfix" style="    max-width: 384px !important;
+                    max-height: 932px !important;
+                    float: left !important;
+                    position: relative !important;
+                    border-radius: 30px !important;
+                    padding: 40px 40px 240px 40px !important;
+                    box-shadow: 0px 1px 29px 0px rgba(1, 1, 1, 0.1) !important;
+                    background-image: linear-gradient(180deg, #ede6ff 0%, white 100%) !important;">
+                <span class="bg-shape"></span>
+                <ul class="tablist multisteps-form__progress">
+                    <a href="<?= base_url() ?>">
+                        <li class="multisteps-form__progress-btn ">
+                            <div class="step-btn-icon-text">
+                                <span>1</span>
+                                <div class="step-btn-icon float-left position-relative">
+                                    <img src="assets/img/bt1.png" alt="">
+                                </div>
+                                <div class="step-btn-text">
+                                    <h2 class="text-uppercase">Survey Kepuasan</h2>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="<?= base_url('pesan-kesan') ?>">
+                        <li class="multisteps-form__progress-btn">
+                            <div class="step-btn-icon-text">
+                                <span>2</span>
+                                <div class="step-btn-icon float-left position-relative">
+                                    <img class="fix-image" src="assets/img/bt2.png" alt="">
+                                </div>
+                                <div class="step-btn-text">
+                                    <h2 class="text-uppercase">Pesan Kesan / Saran</h2>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="<?= base_url('pengaduan') ?>">
+                        <li class="multisteps-form__progress-btn">
+                            <div class="step-btn-icon-text">
+                                <span>3</span>
+                                <div class="step-btn-icon float-left position-relative">
+                                    <img class="fix-image-2" src="assets/img/bt3.png" alt="">
+                                </div>
+                                <div class="step-btn-text">
+                                    <h2 class="text-uppercase">Pengaduan</h2>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <?php
+            // $this->load->view('fragment/menu') 
+            ?>
+            <div class="step-inner-content clearfix position-relative" style="    width: 100% !important;
+    float: right !important;
+    margin-left: 30px !important;
+    max-width: 1292px !important;
+    border-radius: 30px !important;
+    padding: 120px 120px 80px !important;
+    box-shadow: 0px 1px 51px 0px rgba(1, 1, 1, 0.06) !important;
+    background-image: linear-gradient(-90deg, #efffff 0%, white 100%) !important;">
                 <span class="bg-shape"></span>
