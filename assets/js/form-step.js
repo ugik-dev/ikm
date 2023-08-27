@@ -30,6 +30,19 @@ $(function () {
     return currentNode;
   };
 
+  $("input[type=radio][name=aksess]").click(function () {
+    $(".js-btn-next1").trigger("click");
+  });
+  $("input[type=radio][name=mutu]").click(function () {
+    $(".js-btn-next2").trigger("click");
+  });
+  $("input[type=radio][name=proses]").click(function () {
+    console.log("ch");
+    $(".js-btn-next3").trigger("click");
+  });
+  $("input[type=radio][name=sistem]").click(function () {
+    $(".js-btn-next4").trigger("click");
+  });
   //get active button step number
   const getActiveStep = (elem) => {
     return Array.from(DOMstrings.stepsBtns).indexOf(elem);
