@@ -21,6 +21,9 @@
     <link href="assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
     <link href="assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
     <link href="assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 
 <body>
@@ -37,14 +40,14 @@
     </div>
     <div class="clearfix"></div> -->
     <div class="wrapper">
-        <div class="wizard-content-1 pos-flex clearfix" style="display: flex !important">
-            <div class="steps d-inline-block clearfix" style="    max-width: 204px !important;
-                    max-height: 932px !important;
+        <div class="wizard-content-1 pos-flex clearfix" style="display: flex !important ; padding: 0px">
+            <div class="steps d-inline-block clearfix" style="    max-width: 174px !important;
+                    max-height: 832px !important;
                     float: left !important;
                     position: relative !important;
-                    border-radius: 30px !important;
-                    padding: 20px 20px 40px 20px !important;
-                    box-shadow: 0px 1px 29px 0px rgba(1, 1, 1, 0.1) !important;
+                    border-radius: 20px !important;
+                    padding: 10px 10px 10px 10px !important;
+                    box-shadow: 0px 1px 19px 0px rgba(1, 1, 1, 0.1) !important;
                     background-image: linear-gradient(180deg, #ede6ff 0%, white 100%) !important;">
                 <span class="bg-shape"></span>
                 <ul class="tablist multisteps-form__progress">
@@ -94,6 +97,8 @@
             ?>
             <div class="step-inner-content clearfix position-relative" style="    width: 100% !important;
     float: right !important;
+    max-height: 832px !important;
+                  
     margin-left: 30px !important;
     margin-top: 0px !important;
     max-width: 1292px !important;

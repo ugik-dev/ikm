@@ -30,18 +30,42 @@ $(function () {
     return currentNode;
   };
 
+  audio1 = new Audio();
+  audio1.src = "assets/sound/1-akses-layanan.mp3";
+  audio2 = new Audio();
+  audio2.src = "assets/sound/2-mutu-layanan.mp3";
+  audio3 = new Audio();
+  audio3.src = "assets/sound/3-proses-layanan.mp3";
+  audio4 = new Audio();
+  audio4.src = "assets/sound/4-sistem-layanan.mp3";
+  audio5 = new Audio();
+  audio5.src = "assets/sound/5-terimakasih.mp3";
+  // audio1.play();
+
+  $(".start_survey").click(function () {
+    $(".js-btn-next0").trigger("click");
+    // audio1.pause();
+    audio1.play();
+  });
   $("input[type=radio][name=aksess]").click(function () {
     $(".js-btn-next1").trigger("click");
+    audio1.pause();
+    audio2.play();
   });
   $("input[type=radio][name=mutu]").click(function () {
     $(".js-btn-next2").trigger("click");
+    audio2.pause();
+    audio3.play();
   });
   $("input[type=radio][name=proses]").click(function () {
-    console.log("ch");
     $(".js-btn-next3").trigger("click");
+    audio3.pause();
+    audio4.play();
   });
+
   $("input[type=radio][name=sistem]").click(function () {
-    $(".js-btn-next4").trigger("click");
+    $("#submit_btn").trigger("click");
+    // audio4.play();
   });
   //get active button step number
   const getActiveStep = (elem) => {

@@ -1,6 +1,39 @@
-<form class="multisteps-form__form" action="https://jthemes.net/themes/html/BeWizard/JobApplication/JobV.1/action.php" id="wizard" method="POST" enctype="multipart/form-data">
+<form class="multisteps-form__form" id="wizard" method="POST" enctype="multipart/form-data">
     <div class="form-area position-relative">
         <div class="multisteps-form__panel js-active" data-animation="scaleIn">
+            <div class="wizard-forms position-relative form-step">
+                <!-- <span class="step-no position-absolute">Step 1</span> -->
+                <div class="wizard-inner-box">
+                    <div class="inner-title text-center">
+                        <h2>Ayo bantu kami menjadi lebih baik</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="need-job-icon-text text-center col-md-12 mt-5 mb-5 start_survey">
+                            <span class="need-job-text-inner" style="height: 400px !important;">
+                                <!-- <span class="checkbox-circle-mark position-absolute"> </span> -->
+                                <span class="need-job-icon">
+                                    <img src="assets/img/sd1.png" alt="">
+                                </span>
+                                <span class="need-job-text mt-4 pt-5">
+                                    <h2 class="text-uppercase need-job-title">
+                                        <!-- <h2>MULAI</h2> --> SENTUH UNTUK MEMULAI!!
+                                    </h2>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="actions mt-3">
+                    <ul>
+                        <li hidden><span class="js-btn-next js-btn-next0" title="Selanjutnya">Selanjutnya</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="bottom-vector position-absolute">
+                <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
+            </div> -->
+        </div>
+        <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms position-relative form-step-2">
                 <!-- <span class="step-no position-absolute">Step 1</span> -->
                 <div class="wizard-inner-box">
@@ -20,8 +53,8 @@
             </div>
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
-            <div class="wizard-forms form-step-2">
-                <span class="step-no position-absolute">Step 2</span>
+            <div class="wizard-forms form-step-3">
+                <!-- <span class="step-no position-absolute">Step 2</span> -->
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Bagaimana Kepuasan anda terhadap Mutu Layanan ?</h2>
@@ -41,8 +74,8 @@
             </div>
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
-            <div class="wizard-forms form-step-3">
-                <span class="step-no position-absolute">Step 3</span>
+            <div class="wizard-forms form-step-4">
+                <!-- <span class="step-no position-absolute">Step 3</span> -->
 
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
@@ -63,8 +96,8 @@
             </div>
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
-            <div class="wizard-forms form-step-4">
-                <span class="step-no position-absolute">Step 4</span>
+            <div class="wizard-forms form-step-5">
+                <!-- <span class="step-no position-absolute">Step 4</span> -->
 
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
@@ -75,8 +108,8 @@
                 <div class="actions mt-3">
                     <ul>
                         <li><span class="js-btn-prev" title="Kembali"> Kembali</span></li>
-                        <!-- <li><span class="js-btn-next" title="Selanjutnya">Selanjutnya</span></li> -->
-                        <li><button type="submit" name="submit"><span class="js-btn-next" title="Simpan">Simpan </span></button></li>
+                        <li hidden><span class="js-btn-next js-btn-next4" title="Selanjutnya">Selanjutnya</span></li>
+                        <li><button type="" id="submit_btn"><span class="" title="Simpan">Simpan </span></button></li>
                     </ul>
                 </div>
                 <div class="bottom-vector position-absolute">
@@ -86,23 +119,23 @@
         </div>
         <!-- step 2 -->
         <div class="multisteps-form__panel" data-animation="scaleIn">
-            <div class="wizard-forms form-step-5">
-                <span class="step-no position-absolute">Step 3</span>
+            <div class="wizard-forms form-step-6">
+                <!-- <span class="step-no position-absolute">Step 3</span> -->
                 <div class="wizard-inner-box">
                     <div class="thank-content text-center">
                         <div class="thank-img">
                             <img src="assets/img/th1.png" alt="">
                         </div>
                         <div class="thank-text">
-                            <h2>Thankyou For submition</h2>
-                            <p><span>Mike Loen</span> We will Email you soon</p>
+                            <h2>Terimakasih</h2>
+                            <p>atas penilaian anda terhadap Puskesmas Puding Besar</p>
                         </div>
-                        <div class="thank-subscribe position-relative">
+                        <!-- <div class="thank-subscribe position-relative">
                             <input class="email" name="subs_email" type="email" placeholder="Subcribe For daily update Jobs">
                             <button type="submit" name="email_submit" value="Submit"> <i class="fas fa-envelope"></i></button>
-                        </div>
+                        </div> -->
                         <div class="thank-btn text-uppercase">
-                            <a href="index.html">Back to home</a>
+                            <a href="<?= base_url() ?>">Kembali</a>
                         </div>
                     </div>
                 </div>
@@ -111,41 +144,16 @@
         </div>
     </div>
 </form>
-<audio controls id="sound1">
-    <source src="assets/sound/1-akses-layanan.mp3" type="audio/mp3">
-</audio>
-
-<!-- <audio controls id="sound2">
-    <source src="assets/sound/2-mutu-layanan.mp3" type="audio/mp3">
-</audio> -->
 <script>
-    // $('#sound1')[0].play();
-    let x = document.getElementById('sound1');
+    // audio1 = new Audio();
+    // audio1.src = "assets/sound/1-akses-layanan.mp3"
+    // audio1.play();
 
-    // let myAudio = new Audio();
-
-    audio = new Audio('assets/sound/1-akses-layanan.mp3');
-
-    function playAudio() {
-        // alert('The audio will start playing now.')
-        // myAudio.src = 'assets/sound/1-akses-layanan.mp3';
-        // myAudio.autoplay = true;
-        // myAudio.loop = true;
-        audio.play()
-    }
-    playAudio()
-    // var audio = {};
-    // audio["walk"] = new Audio();
-    // audio["walk"].src = "assets/sound/1-akses-layanan.mp3"
-    // // audio["walk"].addEventListener('load', function() {
-    // audio["walk"].play();
-    // });
-
-    function renderOption(kolom, id) {
+    function renderOption(kolom, id, required = "") {
         var opsi = ` <div class="row">
                                             <div class="col-md-6">
                                                 <label class="need-job-icon-text text-center col-md-12 ">
-                                                    <input type="radio" name="${kolom}" value="1" class="j-checkbox">
+                                                    <input required="${required}" type="radio" name="${kolom}" value="1" class="j-checkbox">
                                                     <span class="need-job-text-inner">
                                                         <span class="checkbox-circle-mark position-absolute"> </span>
                                                         <span class="need-job-icon">
@@ -159,7 +167,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label class="need-job-icon-text text-center col-md-12 ">
-                                                    <input type="radio" name="${kolom}" value="2" class="j-checkbox">
+                                                    <input  type="radio" name="${kolom}" value="2" class="j-checkbox">
                                                     <span class="need-job-text-inner">
                                                         <span class="checkbox-circle-mark position-absolute"> </span>
                                                         <span class="need-job-icon">
@@ -172,13 +180,53 @@
                                                 </label>
                                             </div>
                                         </div>`;
-        // console.log(opsi);
         $('#' + id).html(opsi);
-        // $('ak')
     }
 
     renderOption('aksess', 'aksess_layanan');
     renderOption('mutu', 'mutu_layanan');
     renderOption('proses', 'proses_layanan');
-    renderOption('sistem', 'sistem_layanan');
+    renderOption('sistem', 'sistem_layanan', 'required');
+    var wizardForm = $("#wizard");
+    $("#submit_btn").on("click", (ev) => {
+        ev.preventDefault();
+        Swal.fire({
+            title: "Loading !",
+            html: "sedang mengumpulkan survey", // add html attribute if you want or remove
+            allowOutsideClick: false,
+        });
+        Swal.showLoading();
+        $.ajax({
+            url: "<?= base_url() . 'main/submit_survey' ?>",
+            type: "POST",
+            data: wizardForm.serialize(),
+            success: (data) => {
+                // buttonIdle(submitBtn);
+                Swal.close();
+                json = JSON.parse(data);
+                if (json["error"]) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Gagal",
+                        text: json["message"],
+                    });
+                    // swal("Login Gagal", json['message'], "error");
+                    return;
+                }
+                $(".js-btn-next4").trigger("click");
+                audio4.pause();
+                audio5.play();
+                setTimeout(function() {
+                    location.reload();
+                    // $(location).reload;
+                }, 10000);
+            },
+            error: () => {
+                // buttonIdle(submitBtn);
+            },
+        });
+    });
+    // wizardForm.submit((ev) => {
+
+    // });
 </script>
