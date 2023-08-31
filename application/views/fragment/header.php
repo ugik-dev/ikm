@@ -51,7 +51,7 @@
                     background-image: linear-gradient(180deg, #ede6ff 0%, white 100%) !important;">
                 <span class="bg-shape"></span>
                 <ul class="tablist multisteps-form__progress">
-                    <a href="<?= base_url() ?>">
+                    <a href="<?= base_url('survey') ?>">
                         <li class="multisteps-form__progress-btn ">
                             <div class="step-btn-icon-text">
                                 <span>1</span>

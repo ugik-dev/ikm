@@ -31,6 +31,18 @@
   <script src="<?php echo base_url('assets2/jquery.min.js'); ?>"></script>
 </head>
 
+<style>
+  survey-success {
+    color: #fff !important;
+    background-color: RGBA(60, 179, 113) !important;
+  }
+
+  survey-warning {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
+  }
+</style>
+
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
@@ -99,7 +111,6 @@
 
               <div class="box">
                 <div class="box-header">
-
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -119,32 +130,37 @@
                       <?php
 
                       $no = 0;
+                      function respon_res($respon)
+                      {
+                        if ($respon == '1') {
+                          return  "<span class='success'> Puas</span>";
+                        } elseif ($respon == '2') {
+                          return "<span class='danger'> Tidak Puas</span>";
+                        }
+                      };
                       foreach ($transaksi as $i) :
 
                         $no++;
                         $id = $i['id'];
                         $respon = $i['respon'];
-                        $tanggal = $i['tanggal'];
+                        $tanggal = $i['waktu'];
 
-                        if ($respon == '1') {
-                          $keterangan = "<span class='success'>Sangat Puas</span>";
-                        } elseif ($respon == '2') {
-                          $keterangan = "Cukup";
-                        } else {
-                          $keterangan = "Tidak Puas";
-                        }
+
                       ?>
                         <tr>
-                          <td><?php
-                              echo $no;
-                              ?></td>
+                          <td>
+                            <span class='badge text-bg-success'> Puas</span>
+                            <?php
+                            echo $no;
+                            ?>
+                          </td>
                           <td><?php
                               echo tgl_indo(explode(' ', $tanggal)[0]);
                               ?></td>
-                          <td><?= $keterangan; ?></td>
-                          <td><?= $i['nama'] . '<br>' . $i['alamat'] ?></td>
-                          <td><?= $i['no_hp'] . ' / ' . $i['email'] ?></td>
-                          <td><?= $i['alasan'] ?></td>
+                          <td><?= respon_res($i['aksess']) ?></td>
+                          <td><?= respon_res($i['mutu']) ?></td>
+                          <td><?= respon_res($i['proses']) ?></td>
+                          <td><?= respon_res($i['sistem']) ?></td>
                         </tr>
                       <?php
                       endforeach;

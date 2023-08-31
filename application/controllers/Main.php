@@ -19,7 +19,7 @@ class Main extends CI_Controller
     {
         echo PHP_VERSION;
     }
-    function index()
+    function survey()
     {
         $dataContent = array(
             'pageContent' => 'page/landing_page',
@@ -30,6 +30,14 @@ class Main extends CI_Controller
     {
         $dataContent = array(
             'pageContent' => 'page/pesan_kesan',
+        );
+        $this->load->view('template/main', $dataContent);
+    }
+
+    function pengaduan()
+    {
+        $dataContent = array(
+            'pageContent' => 'page/pengaduan',
         );
         $this->load->view('template/main', $dataContent);
     }
@@ -48,6 +56,26 @@ class Main extends CI_Controller
                 throw new UserException('Maaf kamu belum mengisi bagian Sistem Layanan');
             }
             $this->AppModel->submit_survey($data);
+            echo json_encode(['error' => false, 'data' => $data]);
+        } catch (Exception $e) {
+            ExceptionHandler::handle($e);
+        }
+    }
+
+    function submit_pesan()
+    {
+        try {
+            $data = $this->input->post();
+            if (empty($data['pesan']))
+                throw new UserException('Maaf kamu belum mengisi pesan / kesan');
+            // } else  if (empty($data['mutu'])) {
+            //     throw new UserException('Maaf kamu belum mengisi bagian Mutu Layanan');
+            // } else  if (empty($data['proses'])) {
+            //     throw new UserException('Maaf kamu belum mengisi bagian Prosess Layanan');
+            // } else  if (empty($data['sistem'])) {
+            //     throw new UserException('Maaf kamu belum mengisi bagian Sistem Layanan');
+            // }
+            $this->AppModel->submit_kesan($data);
             echo json_encode(['error' => false, 'data' => $data]);
         } catch (Exception $e) {
             ExceptionHandler::handle($e);

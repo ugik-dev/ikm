@@ -2,7 +2,6 @@
     <div class="form-area position-relative">
         <div class="multisteps-form__panel js-active" data-animation="scaleIn">
             <div class="wizard-forms position-relative form-step">
-                <!-- <span class="step-no position-absolute">Step 1</span> -->
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Ayo bantu kami menjadi lebih baik</h2>
@@ -29,13 +28,9 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="bottom-vector position-absolute">
-                <img src="assets/img/sd1.png" style="margin-left: 100px" alt="">
-            </div> -->
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms position-relative form-step-2">
-                <!-- <span class="step-no position-absolute">Step 1</span> -->
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Bagaimana Kepuasan anda terhadap Aksess Layanan ?</h2>
@@ -54,7 +49,6 @@
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms form-step-3">
-                <!-- <span class="step-no position-absolute">Step 2</span> -->
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Bagaimana Kepuasan anda terhadap Mutu Layanan ?</h2>
@@ -75,8 +69,6 @@
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms form-step-4">
-                <!-- <span class="step-no position-absolute">Step 3</span> -->
-
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Bagaimana kepuasan terhadap proses layanan kesehatan termasuk pegawai?</h2>
@@ -87,7 +79,6 @@
                     <ul>
                         <li><span class="js-btn-prev" title="Kembali"> Kembali</span></li>
                         <li hidden><span class="js-btn-next js-btn-next3" title="Selanjutnya">Selanjutnya</span></li>
-                        <!-- <li><button type="submit" name="submit"><span class="js-btn-next" title="NEXT">Submit </span></button></li> -->
                     </ul>
                 </div>
                 <div class="bottom-vector position-absolute">
@@ -97,8 +88,6 @@
         </div>
         <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms form-step-5">
-                <!-- <span class="step-no position-absolute">Step 4</span> -->
-
                 <div class="wizard-inner-box">
                     <div class="inner-title text-center">
                         <h2>Bagaimana kepuasan terhadap Sistem Layanan ?</h2>
@@ -117,10 +106,8 @@
                 </div>
             </div>
         </div>
-        <!-- step 2 -->
         <div class="multisteps-form__panel" data-animation="scaleIn">
             <div class="wizard-forms form-step-6">
-                <!-- <span class="step-no position-absolute">Step 3</span> -->
                 <div class="wizard-inner-box">
                     <div class="thank-content text-center">
                         <div class="thank-img">
@@ -130,10 +117,6 @@
                             <h2>Terimakasih</h2>
                             <p>atas penilaian anda terhadap Puskesmas Puding Besar</p>
                         </div>
-                        <!-- <div class="thank-subscribe position-relative">
-                            <input class="email" name="subs_email" type="email" placeholder="Subcribe For daily update Jobs">
-                            <button type="submit" name="email_submit" value="Submit"> <i class="fas fa-envelope"></i></button>
-                        </div> -->
                         <div class="thank-btn text-uppercase">
                             <a href="<?= base_url() ?>">Kembali</a>
                         </div>
@@ -145,10 +128,6 @@
     </div>
 </form>
 <script>
-    // audio1 = new Audio();
-    // audio1.src = "assets/sound/1-akses-layanan.mp3"
-    // audio1.play();
-
     function renderOption(kolom, id, required = "") {
         var opsi = ` <div class="row">
                                             <div class="col-md-6">
@@ -182,7 +161,6 @@
                                         </div>`;
         $('#' + id).html(opsi);
     }
-
     renderOption('aksess', 'aksess_layanan');
     renderOption('mutu', 'mutu_layanan');
     renderOption('proses', 'proses_layanan');
@@ -210,7 +188,6 @@
                         title: "Gagal",
                         text: json["message"],
                     });
-                    // swal("Login Gagal", json['message'], "error");
                     return;
                 }
                 $(".js-btn-next4").trigger("click");
@@ -218,15 +195,9 @@
                 audio5.play();
                 setTimeout(function() {
                     location.reload();
-                    // $(location).reload;
                 }, 10000);
             },
-            error: () => {
-                // buttonIdle(submitBtn);
-            },
+            error: () => {},
         });
     });
-    // wizardForm.submit((ev) => {
-
-    // });
 </script>
