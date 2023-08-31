@@ -118,7 +118,7 @@
                             <p>atas penilaian anda terhadap Puskesmas Puding Besar</p>
                         </div>
                         <div class="thank-btn text-uppercase">
-                            <a href="<?= base_url() ?>">Kembali</a>
+                            <a href="<?= base_url('survey') ?>">Kembali</a>
                         </div>
                     </div>
                 </div>
