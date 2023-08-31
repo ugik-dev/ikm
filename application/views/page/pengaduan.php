@@ -13,8 +13,8 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <label class="need-job-icon-text text-center col-md-12 " style="height: 450px !important;">
-                                    <span class="need-job-text-inner" style="height: 450px !important;">
+                                <label class="need-job-icon-text text-center col-md-12 " style="height: 650px !important;">
+                                    <span class="need-job-text-inner" style="height: 650px !important;">
                                         <!-- <span class="checkbox-circle-mark position-absolute"> </span> -->
                                         <span class="need-job-icon">
                                             <img src="assets/img/sd1.png" style="height: 150px !important" alt="">

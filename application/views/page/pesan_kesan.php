@@ -32,13 +32,13 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <!-- <div class="col-lg-3">
 
                             <div class="speaker d-flex justify-content-center  align-items-center" onclick="runSpeechRecog()" style="display: flex;justify-content: space-between;width: 13rem; height: 70% ;box-shadow: 0 0 13px #0000003d;border-radius: 10px;">
                                 <i class="fa fa-microphone fa-5x"></i>
                             </div>
-                        </div>
-                        <div class="col-lg-9">
+                        </div> -->
+                        <div class="col-lg-12">
 
                             <div class="form-input-inner add-textarea has-float-label  position-relative">
                                 <textarea name="pesan" class="form-control" id="pesan" placeholder="Pesan / Kesan / Saran" required="required"></textarea>
