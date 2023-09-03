@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Job V1</title>
+    <title>Survey Kepuasan Masyarakat | Puskesmas Puding Besar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.carousel.css">

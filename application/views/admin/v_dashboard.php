@@ -79,42 +79,99 @@ $profil = getProfil();
           <li class="active">Dashboard</li>
         </ol>
       </section>
+      <?php
+      $query = $this->db->query("SELECT count('id_survey') total,
+              COUNT(IF(aksess = 2, 1, NULL)) AS aksess,
+              COUNT(IF(mutu = 2, 1, NULL)) AS mutu,
+              COUNT(IF(proses = 2, 1, NULL)) AS proses,
+              COUNT(IF(sistem = 2, 1, NULL)) AS sistem
+               FROM app_survey");
+      $res = $query->result_array()[0];
+      $total = $res['total'];
+      $aksess = round($res['aksess'] / $total * 100);
+      $mutu = round($res['mutu'] / $total * 100);
+      $proses = round($res['proses'] / $total * 100);
+      $sistem = round($res['sistem'] / $total * 100);
 
+      $query = $this->db->query("SELECT count('id_kesan') total
+           FROM app_kesan");
+      $res = $query->result_array()[0];
+      $total_kesan = $res['total'];
+      ?>
       <!-- Main content -->
       <section class="content">
         <!-- Info boxes -->
+        <!-- <div class="col-md-12"> -->
         <div class="row">
+
+          <div class="col-sm-6">
+
+            <div class="info-box bg-yellow">
+              <span class="info-box-icon"><i class="fa fa-globe"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Responden Survey</span>
+                <span class="info-box-number"><?php echo number_format($total); ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 100%"></div>
+                </div>
+                <span class="progress-description">
+                  Responden
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+
+            <div class="info-box bg-aqua">
+              <span class="info-box-icon"><i class="fa fa-users"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Pesan / Kesan / Saran</span>
+                <span class="info-box-number"><?php echo number_format($total_kesan); ?></span>
+
+                <div class="progress">
+                  <div class="progress-bar" style="width: 100%"></div>
+                </div>
+                <span class="progress-description">
+                  Responden
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- </div> -->
+        <div class="row">
+
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-              <span class="info-box-icon bg-aqua"><i class="fa fa-chrome"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Chrome'");
-              $jml = $query->num_rows();
-              ?>
+
+              <span class="info-box-icon bg-lime"><i class="fa fa-sign-in"></i></span>
+
               <div class="info-box-content">
-                <span class="info-box-text">Chrome</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
+                <span class="info-box-text">Akses Layanan</span>
+                <span class="info-box-number"><?php echo $aksess; ?>% Puas</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-xs-12">
+          <!-- <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-              <span class="info-box-icon bg-red"><i class="fa fa-firefox"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Firefox' OR pengunjung_perangkat='Mozilla'");
-              $jml = $query->num_rows();
-              ?>
+              <span class="info-box-icon bg-red">
+                <i class="fa fa-firefox"></i>
+                <?= $aksess ?>%
+              </span>
+
               <div class="info-box-content">
-                <span class="info-box-text">Mozilla Firefox</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
+                <span class="info-box-text">Aksess</span>
+                <span class="info-box-number"><?php echo $aksess; ?></span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-          </div>
+          </div> -->
           <!-- /.col -->
 
           <!-- fix for small devices only -->
@@ -122,14 +179,10 @@ $profil = getProfil();
 
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-              <span class="info-box-icon bg-green"><i class="fa fa-bug"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Googlebot'");
-              $jml = $query->num_rows();
-              ?>
+              <span class="info-box-icon bg-navy"><i class="fa fa-balance-scale" aria-hidden="true"></i></span>
               <div class="info-box-content">
-                <span class="info-box-text">Googlebot</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
+                <span class="info-box-text">Mutu</span>
+                <span class="info-box-number"><?php echo $mutu; ?></span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -138,51 +191,23 @@ $profil = getProfil();
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-              <span class="info-box-icon bg-yellow"><i class="fa fa-opera"></i></span>
-              <?php
-              $query = $this->db->query("SELECT * FROM tbl_pengunjung WHERE pengunjung_perangkat='Opera'");
-              $jml = $query->num_rows();
-              ?>
+              <span class="info-box-icon bg-fuchsia"><i class="fa fa-spinner" aria-hidden="true"></i></span>
+
               <div class="info-box-content">
-                <span class="info-box-text">Opera</span>
-                <span class="info-box-number"><?php echo $jml; ?></span>
+                <span class="info-box-text">Prosess</span>
+                <span class="info-box-number"><?php echo $proses; ?></span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
           </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-teal"><i class="fa fa-desktop" aria-hidden="true"></i></span>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="box">
-              <div class="box-header with-border">
-                <h3 class="box-title">Pengunjung bulan ini</h3>
-
+              <div class="info-box-content">
+                <span class="info-box-text">Sistem</span>
+                <span class="info-box-number"><?php echo $sistem; ?></span>
               </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-md-12">
-
-                    <div class="col-md-12">
-                      <canvas id="canvas" width="1000" height="280"></canvas>
-                    </div>
-                    <!-- /.chart-responsive -->
-                  </div>
-                  <!-- /.col -->
-
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- ./box-body -->
-
-              <!-- /.box-footer -->
             </div>
-            <!-- /.box -->
           </div>
           <!-- /.col -->
         </div>
@@ -190,24 +215,22 @@ $profil = getProfil();
 
         <!-- Main row -->
         <div class="row">
-          <!-- Left col -->
-          <div class="col-md-8">
-            <!-- MAP & BOX PANE -->
+          <div class="col-md-12">
             <div class="box box-success">
               <div class="box-header with-border">
-                <h3 class="box-title">Posting Populer</h3>
+                <h3 class="box-title">Pesan Kesan</h3>
 
                 <table class="table">
                   <?php
-                  $query = $this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 10");
+                  $query = $this->db->query("SELECT * FROM app_kesan ORDER BY id_kesan DESC LIMIT 10");
                   foreach ($query->result_array() as $i) :
-                    $tulisan_id = $i['tulisan_id'];
+                    // $tulisan_id = $i['tulisan_id'];
                     $tulisan_judul = $i['tulisan_judul'];
                     $tulisan_views = $i['tulisan_views'];
                   ?>
                     <tr>
-                      <td><?php echo $tulisan_judul; ?></td>
-                      <td><?php echo $tulisan_views . ' Views'; ?></td>
+                      <td><?php echo $i['pesan']; ?></td>
+                      <td><?php echo $i['nama']; ?></td>
                     </tr>
                   <?php endforeach; ?>
                 </table>
@@ -221,8 +244,7 @@ $profil = getProfil();
           </div>
           <!-- /.col -->
 
-          <div class="col-md-4">
-            <!-- Info Boxes Style 2 -->
+          <!-- <div class="col-md-4">
             <div class="info-box bg-yellow">
               <span class="info-box-icon"><i class="fa fa-safari"></i></span>
               <?php
@@ -240,9 +262,7 @@ $profil = getProfil();
                   Penggunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
             <div class="info-box bg-green">
               <span class="info-box-icon"><i class="fa fa-globe"></i></span>
               <?php
@@ -260,9 +280,7 @@ $profil = getProfil();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
             <div class="info-box bg-red">
               <span class="info-box-icon"><i class="fa fa-users"></i></span>
               <?php
@@ -280,9 +298,7 @@ $profil = getProfil();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
             <div class="info-box bg-aqua">
               <span class="info-box-icon"><i class="fa fa-users"></i></span>
               <?php
@@ -300,19 +316,11 @@ $profil = getProfil();
                   Pengunjung
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
 
-            <!-- PRODUCT LIST -->
-
-            <!-- /.box -->
-          </div>
-          <!-- /.col -->
+          </div> -->
         </div>
-        <!-- /.row -->
       </section>
-      <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 
