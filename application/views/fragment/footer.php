@@ -7,7 +7,7 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/js/form-step.js"></script>
+<script src="assets/js/form-step.js?v=0.0.2"></script>
 <script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/switch.js"></script>
