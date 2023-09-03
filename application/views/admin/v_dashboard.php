@@ -182,7 +182,7 @@ $profil = getProfil();
               <span class="info-box-icon bg-navy"><i class="fa fa-balance-scale" aria-hidden="true"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Mutu</span>
-                <span class="info-box-number"><?php echo $mutu; ?></span>
+                <span class="info-box-number"><?php echo $mutu; ?>% Puas</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -195,7 +195,7 @@ $profil = getProfil();
 
               <div class="info-box-content">
                 <span class="info-box-text">Prosess</span>
-                <span class="info-box-number"><?php echo $proses; ?></span>
+                <span class="info-box-number"><?php echo $proses; ?>% Puas</span>
               </div>
             </div>
           </div>
@@ -205,7 +205,7 @@ $profil = getProfil();
 
               <div class="info-box-content">
                 <span class="info-box-text">Sistem</span>
-                <span class="info-box-number"><?php echo $sistem; ?></span>
+                <span class="info-box-number"><?php echo $sistem; ?>% Puas</span>
               </div>
             </div>
           </div>
