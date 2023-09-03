@@ -26,7 +26,9 @@ class AppModel extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('app_kesan');
-        $res = $this->input->get();
+        $res = $this->db->get();
+        // echo $this->db->last_query();
+        // die();
         return $res->result_array();
     }
     function addSurvey($data)

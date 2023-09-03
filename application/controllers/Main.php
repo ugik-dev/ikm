@@ -15,6 +15,16 @@ class Main extends CI_Controller
         // $this->m_pengunjung->count_visitor();
         $this->db->db_debug = FALSE;
     }
+    function index()
+    {
+
+        $dataContent = array(
+            'pageContent' => 'admin/v_login',
+            // 'captcha_img' => $cap['image']
+        );
+        $this->load->view('template/main', $dataContent);
+    }
+
     function cek_php()
     {
         echo PHP_VERSION;

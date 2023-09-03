@@ -34,12 +34,12 @@
 <style>
   survey-success {
     color: #fff !important;
-    background-color: RGBA(60, 179, 113) !important;
+    background-color: #92d792 !important;
   }
 
   survey-warning {
     color: #fff !important;
-    background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
+    background-color: red !important;
   }
 </style>
 
@@ -58,7 +58,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Data Survey
+          Data Survey Kepuasan
           <small></small>
         </h1>
         <ol class="breadcrumb">
@@ -133,9 +133,9 @@
                       function respon_res($respon)
                       {
                         if ($respon == '1') {
-                          return  "<span class='success'> Puas</span>";
+                          return "<span class='badge' style='background-color: #e16060 !important'> Tidak Puas</span>";
                         } elseif ($respon == '2') {
-                          return "<span class='danger'> Tidak Puas</span>";
+                          return  "<span class='badge' style='background-color: #92d792 !important'> Puas</span>";
                         }
                       };
                       foreach ($transaksi as $i) :
@@ -144,12 +144,9 @@
                         $id = $i['id'];
                         $respon = $i['respon'];
                         $tanggal = $i['waktu'];
-
-
                       ?>
                         <tr>
                           <td>
-                            <span class='badge text-bg-success'> Puas</span>
                             <?php
                             echo $no;
                             ?>

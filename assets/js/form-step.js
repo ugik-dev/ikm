@@ -30,6 +30,7 @@ $(function () {
     return currentNode;
   };
 
+  var sound = "off";
   audio1 = new Audio();
   audio1.src = "assets/sound/1-akses-layanan.mp3";
   audio2 = new Audio();
@@ -43,24 +44,33 @@ $(function () {
   // audio1.play();
 
   $(".start_survey").click(function () {
+    sound = $(this).data("sound");
+    console.log(sound);
+
     $(".js-btn-next0").trigger("click");
     // audio1.pause();
-    audio1.play();
+    if (sound == "on") audio1.play();
   });
   $("input[type=radio][name=aksess]").click(function () {
     $(".js-btn-next1").trigger("click");
-    audio1.pause();
-    audio2.play();
+    if (sound == "on") {
+      audio1.pause();
+      audio2.play();
+    }
   });
   $("input[type=radio][name=mutu]").click(function () {
     $(".js-btn-next2").trigger("click");
-    audio2.pause();
-    audio3.play();
+    if (sound == "on") {
+      audio2.pause();
+      audio3.play();
+    }
   });
   $("input[type=radio][name=proses]").click(function () {
     $(".js-btn-next3").trigger("click");
-    audio3.pause();
-    audio4.play();
+    if (sound == "on") {
+      audio3.pause();
+      audio4.play();
+    }
   });
 
   $("input[type=radio][name=sistem]").click(function () {

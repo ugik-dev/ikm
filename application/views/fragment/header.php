@@ -8,23 +8,25 @@
     <meta charset="utf-8">
     <title>Job V1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.min.css">
+    <!-- <link rel="stylesheet" href="<?= base_url() ?>assets/css/fontawesome-all.css"> -->
+    <!-- <link rel="stylesheet" href="<?= base_url() ?>assets/fontawesome6.4.2/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
 
     <!-- Color switcher Alternatives | you can remove this section -->
-    <link rel="stylesheet" type="text/css" href="assets/css/colors/switch.css">
-    <link href="assets/css/colors/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
-    <link href="assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
-    <link href="assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
-    <link href="assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
-    <script src="assets/js/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/colors/switch.css">
+    <link href="<?= base_url() ?>assets/css/colors/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
+    <link href="<?= base_url() ?>assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
+    <link href="<?= base_url() ?>assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
+    <link href="<?= base_url() ?>assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
+    <script src="<?= base_url() ?>assets/js/sweetalert2.all.min.js"></script>
+    <script src="<?= base_url() ?>assets/fontawesome6.4.2/js/fontawesome.js"></script>
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/sweetalert2.min.css">
 
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="<?= base_url() ?>assets/js/jquery-3.3.1.min.js"></script>
 
 <body>
     <!-- This code is use for color chooser, you can delete -->
@@ -56,7 +58,7 @@
                             <div class="step-btn-icon-text">
                                 <span>1</span>
                                 <div class="step-btn-icon float-left position-relative">
-                                    <img src="assets/img/bt1.png" alt="">
+                                    <img src="<?= base_url() ?>assets/img/bt1.png" alt="">
                                 </div>
                                 <div class="step-btn-text">
                                     <h2 class="text-uppercase">Survey Kepuasan</h2>
@@ -69,7 +71,7 @@
                             <div class="step-btn-icon-text">
                                 <span>2</span>
                                 <div class="step-btn-icon float-left position-relative">
-                                    <img class="fix-image" src="assets/img/bt2.png" alt="">
+                                    <img class="fix-image" src="<?= base_url() ?>assets/img/bt2.png" alt="">
                                 </div>
                                 <div class="step-btn-text">
                                     <h2 class="text-uppercase">Pesan Kesan / Saran</h2>
@@ -82,7 +84,7 @@
                             <div class="step-btn-icon-text">
                                 <span>3</span>
                                 <div class="step-btn-icon float-left position-relative">
-                                    <img class="fix-image-2" src="assets/img/bt3.png" alt="">
+                                    <img class="fix-image-2" src="<?= base_url() ?>assets/img/bt3.png" alt="">
                                 </div>
                                 <div class="step-btn-text">
                                     <h2 class="text-uppercase">Pengaduan</h2>
